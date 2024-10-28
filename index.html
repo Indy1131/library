@@ -4,14 +4,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My Library</title>
 
     <link rel="stylesheet" href="styles.css">
     <script src="main.js" defer></script>
 </head>
 
 <body>
-
+    <div class="container">
+        <div class="nav">
+            <div class="nav-contents">
+                <h1>My Library</h1>
+            </div>
+        </div>
+        <div class="content">
+            <div id="template" class="book">
+                <h1>Lord of the Rings</h1>
+                <h2>JRR Tolkien</h2>
+                <h2>1201 pages</h2>
+                <div class="buttons">
+                    <button>I've read this!</button>
+                    <button>Remove</button>
+                </div>
+            </div>
+        </div>
+        <h1 id="emptyLabel">You currently have no books in your library.</h1>
+    </div>
+    <dialog>
+        <form>
+            <label for="title">Title</label>
+            <input id="title" placeholder="Title" name="title" autocomplete="off" required>
+            <label for="author">Author</label>
+            <input id="author" placeholder="Author" name="author" autocomplete="off" required>
+            <label for="pages">Pages</label>
+            <input id="pages" placeholder="Number of Pages" name="pages" autocomplete="off" required>
+            <div class="read-box">
+                <label for="read">I've read this</label>
+                <input id="read" type="checkbox" name="read">
+            </div>
+            <button>Add book</button>
+        </form>
+    </dialog>
+    <div class="bottom-nav">
+        <button id="formReveal">+</button>
+    </div>
 </body>
 
 </html>
